@@ -7,6 +7,10 @@ config_file = "config.json"
 
 backup_filename = 'config_' + str(datetime.datetime.today()).replace('-', '')[:8] + '.json'
 
+# Set file name
+def set_name(new_filename):
+    config_file = new_filename
+    
 # Load file in read-only
 def load_json_r():
     return open(config_file, 'r')
